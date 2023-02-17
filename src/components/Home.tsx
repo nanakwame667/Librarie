@@ -4,14 +4,12 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-center items-center w-full h-auto">
+    <div className="flex justify-center items-center w-full h-screen">
       <Button
-        width="250px"
-        height="50px"
         backgroundColor="#F02B37"
         color="#fff"
-        borderRadius="10px"
-        className=" font-medium text-white"
+        borderRadius="7px"
+        className=" font-medium text-white w-1/4 h-12"
         onClick={() => navigate("/signup")}
       >
         Sign Up

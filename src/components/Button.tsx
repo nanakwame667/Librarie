@@ -2,8 +2,7 @@ import React from "react";
 
 export type ButtonProps = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  width: string;
-  height: string;
+
   borderRadius: string;
   children: React.ReactNode;
   backgroundColor: string;
@@ -15,8 +14,7 @@ export type ButtonProps = {
 const Button = ({
   className,
   onClick,
-  width,
-  height,
+
   borderRadius,
   children,
   backgroundColor,
@@ -28,8 +26,6 @@ const Button = ({
       className={className}
       onClick={onClick}
       style={{
-        width: width,
-        height: height,
         borderRadius: borderRadius,
         backgroundColor: backgroundColor,
       }}
