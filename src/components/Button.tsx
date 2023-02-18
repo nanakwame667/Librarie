@@ -6,6 +6,7 @@ export type ButtonProps = {
   borderRadius: string;
   children: React.ReactNode;
   backgroundColor: string;
+  border?: string;
   color: string;
   disabled?: boolean;
   className: string;
@@ -14,7 +15,7 @@ export type ButtonProps = {
 const Button = ({
   className,
   onClick,
-
+  border,
   borderRadius,
   children,
   backgroundColor,
@@ -28,6 +29,7 @@ const Button = ({
       style={{
         borderRadius: borderRadius,
         backgroundColor: backgroundColor,
+        border: border,
       }}
       disabled={disabled}
       color={color}

@@ -3,11 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Signup from "./AuthLayout/Signup";
-import Login from "./AuthLayout/Login";
-import ResetPassword from "./AuthLayout/ResetPassword";
-import ValidatePassword from "./AuthLayout/ValidatePassword";
+import Signup from "./Layouts/AuthLayout/Signup";
+import Login from "./Layouts/AuthLayout/Login";
+import ResetPassword from "./Layouts/AuthLayout/ResetPassword";
+import ValidatePassword from "./Layouts/AuthLayout/ValidatePassword";
 import Home from "./components/Home";
+import DashboardLayout from "./Layouts/Dashboad/DashboardLayout";
+import Welcome from "./components/Welcome";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,16 @@ const router = createBrowserRouter([
       {
         path: "/validate-password",
         element: <ValidatePassword />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "/dashboard/welcome",
+        element: <Welcome />,
       },
     ],
   },
