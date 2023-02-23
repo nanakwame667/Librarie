@@ -23,17 +23,18 @@ const LoginForm = () => {
       <form>
         <Inputfield
           label="Email"
-          required={true}
+          requested={true}
           type="email"
-          className="rounded-md h-12 border-innerText border-opacity-20 my-4 text-black focus:ring-primary  focus:border-primary focus:outline-none"
+          className=" peer rounded-md h-12 border-innerText border-opacity-20 my-4 text-black focus:ring-primary  focus:border-primary focus:outline-none"
           placeholder="Enter your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete="email"
+          required={true}
         />
         <Inputfield
           label="Password"
-          required={true}
+          requested={true}
           type="password"
           className="rounded-md h-12 border-innerText border-opacity-20 my-4 text-black focus:ring-primary  focus:border-primary focus:outline-none"
           placeholder="Enter your password"
@@ -44,7 +45,7 @@ const LoginForm = () => {
         <div className="flex items-center justify-between w-full mb-4">
           <div className="flex items-center">
             <Inputfield
-              required={false}
+              requested={false}
               type="checkbox"
               className="rounded w-5 h-5  border-innerText border-opacity-50 my-4 text-primary focus:ring-primary  focus:border-primary focus:outline-none"
               placeholder="Enter your password"
@@ -54,7 +55,7 @@ const LoginForm = () => {
             />
             <span className="ml-2 text-title font-regular">Remember Me</span>
           </div>
-          <a href="/reset-password" className="text-primary font-medium">
+          <a href="/validate-password" className="text-primary font-medium">
             Forgot Password?
           </a>
         </div>
